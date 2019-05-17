@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="create">
+            <div class="select-wrap tag">
+                <div class="select-item" data-tag="div">DIV</div>
+                <div class="select-item" data-tag="span">SPAN</div>
+                <div class="select-item" data-tag="img">IMG</div>
+                <div class="select-item" data-tag="h1">H1</div>
+            </div>
+            <div class="select-wrap color">
+                <div class="select-item bg">
+                    <input type="color" name="color-bg">
+                </div>
+                <div class="select-item fg">
+                    <input type="color" name="color-fg">
+                </div>
+            </div>
+            <div class="select-wrap attr">
+                <div class="select-item">
+                    <input type="text" name="attr">
+                    :
+                    <input type="text" name="val">
+                </div>
+            </div>
+            <div class="select-wrap text">
+                <div class="select-item">
+                    <textarea name="text" placeholder="innerText"></textarea>
+                </div>
+            </div>
+            <div class="select-wrap">
+                <button onclick="genTag()">Make!</button>
+            </div>
+        </div>
+        <div class="result"></div>
+        <div class="history"></div>
+    </div>
+
+    <script src="/js/common.js"></script>
+</body>
+</html>

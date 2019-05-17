@@ -1,0 +1,60 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    border: 1px solid black
+}
+
+.wrap {
+    margin: 0 20px;
+}
+.create {
+    overflow: hidden;
+}
+.select-wrap {
+    float: left;
+    width: 150px;
+    height: 300px;
+    margin: 10px;
+}
+.select-wrap::after {
+    clear: both;
+}
+.select-item {
+    text-align: center;
+}
+.tag > .select-item {
+    height: 30px;
+    line-height: 30px;
+}
+.tag > .select-item.active {
+    background-color: skyblue;
+}
+.tag > .select-item:hover {
+    background-color: skyblue;
+}
+.color > .select-item {
+    height: 100px;
+    line-height: 100px;
+}
+.color > .bg::before {
+    content: "배경색: ";
+}
+.color > .fg::before {
+    content: "글자색: ";
+}
+.attr > .select-item {
+    height: 30px;
+    line-height: 30px;
+}
+.attr input {
+    width: 60px;
+}
+.text textarea[name='text'] {
+    width: calc(100% - 10px);
+    margin: 5px;
+    height: 240px;
+    resize: none;
+}
