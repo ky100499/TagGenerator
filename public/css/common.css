@@ -3,14 +3,20 @@ html, body {
     padding: 0;
 }
 
-div {
-    border: 1px solid black
-}
-
 .wrap {
     margin: 0 20px;
 }
-.create {
+.wrap > div {
+    border: 1px solid #000000;
+    margin: 0 10px 15px;
+}
+.wrap > h1 {
+    margin: 15px 10px 0;
+}
+.wrap .select-wrap {
+    border: 1px solid #000000;
+}
+#create {
     overflow: hidden;
 }
 .select-wrap {
@@ -24,6 +30,7 @@ div {
 }
 .select-item {
     text-align: center;
+    border-bottom: 1px solid #000000;
 }
 .tag > .select-item {
     height: 30px;
@@ -36,8 +43,11 @@ div {
     background-color: skyblue;
 }
 .color > .select-item {
-    height: 100px;
-    line-height: 100px;
+    height: 149px;
+    line-height: 149px;
+}
+.color > .select-item:last-child {
+    border-bottom: none;
 }
 .color > .bg::before {
     content: "배경색: ";
@@ -52,9 +62,16 @@ div {
 .attr input {
     width: 60px;
 }
+.text > .select-item {
+    height: 100%;
+}
 .text textarea[name='text'] {
-    width: calc(100% - 10px);
-    margin: 5px;
-    height: 240px;
+    width: calc(100% - 14px);
+    height: calc(100% - 14px);
+    margin: 5px 0;
     resize: none;
+}
+.select-wrap > button {
+    width: 100%;
+    height: 100%;
 }

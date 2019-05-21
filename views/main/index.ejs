@@ -8,7 +8,8 @@
 </head>
 <body>
     <div class="wrap">
-        <div class="create">
+        <h1>Create</h1>
+        <div id="create">
             <div class="select-wrap tag">
                 <div class="select-item" data-tag="div">DIV</div>
                 <div class="select-item" data-tag="span">SPAN</div>
@@ -29,6 +30,16 @@
                     :
                     <input type="text" name="val">
                 </div>
+                <div class="select-item">
+                    <input type="text" name="attr">
+                    :
+                    <input type="text" name="val">
+                </div>
+                <div class="select-item">
+                    <input type="text" name="attr">
+                    :
+                    <input type="text" name="val">
+                </div>
             </div>
             <div class="select-wrap text">
                 <div class="select-item">
@@ -39,8 +50,10 @@
                 <button onclick="genTag()">Make!</button>
             </div>
         </div>
-        <div class="result"></div>
-        <div class="history"></div>
+        <h1>Result</h1>
+        <div id="result"></div>
+        <h1>History</h1>
+        <div id="history"></div>
     </div>
 
     <script src="/js/common.js"></script>
