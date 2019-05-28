@@ -8,46 +8,76 @@
 </head>
 <body>
     <div class="wrap">
+        <div id="title">
+            HTML 팔레트
+        </div>
         <h1>Create</h1>
         <div id="create">
-            <div class="select-wrap tag">
-                <div class="select-item" data-tag="div">DIV</div>
-                <div class="select-item" data-tag="span">SPAN</div>
-                <div class="select-item" data-tag="img">IMG</div>
-                <div class="select-item" data-tag="h1">H1</div>
-            </div>
-            <div class="select-wrap color">
-                <div class="select-item bg">
-                    <input type="color" name="color-bg">
+            <div id="tag" class="select-wrap">
+                <div class="select-head">
+                    태그 선택
                 </div>
-                <div class="select-item fg">
-                    <input type="color" name="color-fg">
+                <div id="select-tag" class="select-body">
+                    <div class="select-item">DIV</div>
+                    <div class="select-item">SPAN</div>
+                    <div class="select-item">IMG</div>
+                    <div class="select-item">H1</div>
                 </div>
             </div>
-            <div class="select-wrap attr">
-                <div class="select-item">
-                    <input type="text" name="attr">
-                    :
-                    <input type="text" name="val">
+            <div id="color" class="select-wrap">
+                <div class="select-head">
+                    색상 선택
                 </div>
-                <div class="select-item">
-                    <input type="text" name="attr">
-                    :
-                    <input type="text" name="val">
-                </div>
-                <div class="select-item">
-                    <input type="text" name="attr">
-                    :
-                    <input type="text" name="val">
+                <div class="select-body">
+                    <div id="bg" class="select-item">
+                        배경색:
+                        <input type="color" id="color-bg">
+                    </div>
+                    <div id="fg" class="select-item">
+                        글자색:
+                        <input type="color" id="color-fg">
+                    </div>
                 </div>
             </div>
-            <div class="select-wrap text">
-                <div class="select-item">
-                    <textarea name="text" placeholder="innerText"></textarea>
+            <div id="attr" class="select-wrap">
+                <div class="select-head">
+                    속성 선택
+                </div>
+                <div id="select-attr" class="select-body">
+                    <div class="select-item">
+                        <input type="text" name="attr">
+                        :
+                        <input type="text" name="val">
+                    </div>
+                    <div class="select-item">
+                        <input type="text" name="attr">
+                        :
+                        <input type="text" name="val">
+                    </div>
+                    <div class="select-item">
+                        <input type="text" name="attr">
+                        :
+                        <input type="text" name="val">
+                    </div>
+                </div>
+            </div>
+            <div id="text" class="select-wrap">
+                <div class="select-head">
+                    내용 입력
+                </div>
+                <div class="select-body">
+                    <div class="select-item">
+                        <textarea id="select-text" placeholder="innerText"></textarea>
+                    </div>
                 </div>
             </div>
             <div class="select-wrap">
-                <button onclick="genTag()">Make!</button>
+                <div class="select-head">
+                    만들기!
+                </div>
+                <div class="select-body">
+                    <button onclick="genTag()">Make!</button>
+                </div>
             </div>
         </div>
         <h1>Result</h1>

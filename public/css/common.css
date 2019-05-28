@@ -4,17 +4,24 @@ html, body {
 }
 
 .wrap {
-    margin: 0 20px;
+    margin: 10px 20px;
 }
 .wrap > div {
     border: 1px solid #000000;
     margin: 0 10px 15px;
+    min-height: 100px;
 }
 .wrap > h1 {
     margin: 15px 10px 0;
 }
-.wrap .select-wrap {
-    border: 1px solid #000000;
+#title {
+    min-height: 0;
+    padding: 20px 0;
+    background: linear-gradient(to left, #e66465, #9198e5);
+    box-shadow: 7px 7px 5px #7f7f7f;
+
+    font-size: 3.5em;
+    text-align: center;
 }
 #create {
     overflow: hidden;
@@ -22,56 +29,75 @@ html, body {
 .select-wrap {
     float: left;
     width: 150px;
-    height: 300px;
     margin: 10px;
 }
 .select-wrap::after {
     clear: both;
 }
+.select-head {
+    border: 1px solid #000000;
+    margin: 0 0 15px;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 3px 3px 5px #7f7f7f;
+}
+.select-body {
+    height: 300px;
+    /* border: 1px solid #000000; */
+}
 .select-item {
     text-align: center;
-    border-bottom: 1px solid #000000;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
-.tag > .select-item {
+#tag .select-item {
     height: 30px;
     line-height: 30px;
 }
-.tag > .select-item.active {
+#tag .select-item.active {
     background-color: skyblue;
 }
-.tag > .select-item:hover {
+#tag .select-item:hover {
     background-color: skyblue;
 }
-.color > .select-item {
-    height: 149px;
-    line-height: 149px;
-}
-.color > .select-item:last-child {
-    border-bottom: none;
-}
-.color > .bg::before {
-    content: "배경색: ";
-}
-.color > .fg::before {
-    content: "글자색: ";
-}
-.attr > .select-item {
+#color .select-item {
     height: 30px;
     line-height: 30px;
 }
-.attr input {
+#attr .select-item {
+    height: 30px;
+    line-height: 30px;
+}
+#attr input {
     width: 60px;
 }
-.text > .select-item {
+#text .select-item {
     height: 100%;
 }
-.text textarea[name='text'] {
+#text textarea {
     width: calc(100% - 14px);
     height: calc(100% - 14px);
     margin: 5px 0;
     resize: none;
+    border: none;
 }
-.select-wrap > button {
+.select-body > button {
     width: 100%;
     height: 100%;
+    font-size: 2em;
+    border-radius: 5px;
+    border-color: rgb(216, 216, 216);
+    background-color: #ffffff;
+}
+.select-body > button:active {
+    box-shadow: inset 0 0 3px #7f7f7f;
+    border-color: rgb(186, 186, 186);
+}
+.select-body > button:focus {
+    outline: none;
+}
+#result > *, #history > * {
+    display: inline-block;
+    margin: 3px;
 }
