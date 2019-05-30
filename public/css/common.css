@@ -85,19 +85,68 @@ html, body {
 .select-body > button {
     width: 100%;
     height: 100%;
+}
+button {
     font-size: 2em;
     border-radius: 5px;
     border-color: rgb(216, 216, 216);
     background-color: #ffffff;
 }
-.select-body > button:active {
+button:active {
     box-shadow: inset 0 0 3px #7f7f7f;
     border-color: rgb(186, 186, 186);
 }
-.select-body > button:focus {
+button:focus {
     outline: none;
 }
-#result > *, #history > * {
+#result-wrap {
+    position: relative;
+}
+#title-wrap {
+    border: none;
+    overflow: hidden;
+    min-height: 0;
+    margin: 0 10px;
+}
+#title-wrap > h1 {
+    width: 50%;
+    margin: 15px 0 0;
+    float: left;
+}
+#title-wrap > h1::after {
+    clear: both;
+}
+#history-wrap {
+    overflow: hidden;
+}
+#history, #saved {
+    min-height: inherit;
+    float: left;
+    overflow: hidden;
+    width: calc(50% - 1px);
+    height: 100%;
+}
+#history::after, #saved::after {
+    clear: both;
+}
+#history {
+    border-right: 1px solid #000000;
+}
+#saved {
+    border-left: 1px solid #000000;
+}
+#result > *, #history > *, #saved > * {
     display: inline-block;
     margin: 3px;
+}
+#save {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150px;
+    height: 100%;
+}
+#save > button {
+    width: 100%;
+    height: 100%;
 }

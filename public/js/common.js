@@ -1,5 +1,6 @@
 let tag = ""
 let tags = document.getElementById("select-tag").children
+let saved = false
 for (let i = 0; i < tags.length; i++) {
     tags[i].addEventListener('click', e => {
         let classes = tags[i].classList
@@ -72,5 +73,15 @@ function genTag() {
         }
 
         document.getElementById("select-text").value = ""
+
+        saved = false
+    }
+}
+
+function saveTag() {
+    if (!saved) {
+        let target = document.getElementById("result").children[0]
+        document.getElementById("saved").prepend(target.cloneNode(true))
+        saved = true
     }
 }
