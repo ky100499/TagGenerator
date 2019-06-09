@@ -4,27 +4,48 @@ let saved = false
 for (let i = 0; i < tags.length; i++) {
     tags[i].addEventListener('click', e => {
         let classes = tags[i].classList
-        let hasActive = false
-        for (let j = 0; j < classes.length; j++) {
-            if (classes[j] == "active") {
-                hasActive = true
-                break
-            }
-        }
-        if (hasActive) {
+        if (classes.contains("active")) {
             tags[i].classList.remove('active')
             tag = ""
         }
         else {
-            for (let j = 0; j < tags.length; j++) {
-                tags[j].classList.remove('active')
-            }
+            let active = document.querySelector("#select-tag .active");
+            if (active)
+                active.classList.remove("active");
+
             tags[i].classList.add('active')
             tag = tags[i].innerText
         }
         console.log(tag)
     })
 }
+
+let attrStack = 0
+document.getElementById("add-attr").addEventListener("click", e => {
+    if (attrStack++ < 5) {
+        let item = document.createElement("div")
+        item.classList.add("select-item")
+
+        item.innerText = " : "
+
+        let ipt_attr = document.createElement("input")
+        ipt_attr.type = "text"
+        ipt_attr.name = "attr"
+        item.prepend(ipt_attr)
+
+        let ipt_val = document.createElement("input")
+        ipt_val.type = "text"
+        ipt_val.name = "val"
+        item.append(ipt_val)
+
+        document.getElementById("select-attr").append(item)
+
+        document.getElementById("select-attr").append(document.getElementById("add-attr"))
+    }
+    else {
+        alert("속성이 이렇게 많이 필요해?")
+    }
+})
 
 function genTag() {
     if (tag == "") {
